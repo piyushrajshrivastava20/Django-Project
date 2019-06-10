@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test Rankings</title>
+		{% load static %}
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+	<link rel="stylesheet" type="text/css" href="{% static 'style.css'%}">
+
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+<div class="header">
+		  <img src="{% static 'img/abc.jpg'%}">
+</div>
+	
+
+	<nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-center">
+
+  <!-- Links -->
+  <ul class="navbar-nav" style="color:#E70707">
+     <li class="nav-item">
+      <a class="nav-link" href="{% url 'home' %}">Home</a>
+    </li>
+  </ul>
+  <ul class=" navbar-nav ml-auto">
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'team' %}"> Teams </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'ground' %}">Grounds</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'stat' %}">Stats</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'runs' %}">Record Stats</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'player' %}">Player Stats</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'ranking' %}">Rankings</a>
+    </li>
+  </ul>
+
+  </nav>
+{% block content %}
+
+
+<h1 style="text-align: center; font-weight: bold; margin-top: 10px"> Test Teams Ranking</h1>
+
+<div class="container">
+  
+  <div class="row">
+    <div class="col-sm-2" >
+      
+    </div>
+    <div class="col-sm-8" >
+       <div class="jumbotron" >
+          <ul class="list-group">
+            <li class="list-group-item"><div class="float-right">Ratings</div>         Name </li>
+            <li class="list-group-item"><div class="float-right">{{ object9.rating }}</div>                        {{ object1.name }}          </li>
+            <li class="list-group-item"><div class="float-right">{{ object10.rating }}</div>                        {{ object.name }}          </li>
+            <li class="list-group-item"><div class="float-right">{{ object11.rating }}</div>                        {{ object2.name }}          </li>
+            <li class="list-group-item"><div class="float-right">{{ object12.rating }}</div>                        {{ object5.name }}          </li>
+            <li class="list-group-item"><div class="float-right">{{ object13.rating }}</div>                        {{ object4.name }}          </li>
+            <li class="list-group-item"><div class="float-right">{{ object14.rating }}</div>                        {{ object6.name }}          </li>
+            <li class="list-group-item"><div class="float-right">{{ object15.rating }}</div>                        {{ object8.name }}          </li>
+            <li class="list-group-item"><div class="float-right">{{ object16.rating }}</div>                        {{ object3.name }}          </li>
+            <li class="list-group-item"><div class="float-right">{{ object17.rating }}</div>                        {{ object7.name }}          </li>            
+
+            
+          </ul>
+
+
+       </div>
+    </div>
+    <div class="col-sm-2" >
+     
+      
+    </div>
+
+  </div>
+</div>
+
+
+<footer class="page-footer font-small blue pt-4" style="background-color: #000000">
+
+    <!-- Footer Links -->
+    <div class="container-fluid text-center text-md-left">
+
+      <!-- Grid row -->
+      <div class="row">
+
+        <!-- Grid column -->
+        <div class="col-md-6 mt-md-0 mt-3">
+
+          <!-- Content -->
+          <h5 class="text-uppercase" style="color: #FFFFFF">About us </h5>
+          <p style="color: #FFFFFF">This Project is done by Piyush Raj(1CR16IS065) and Priti Singh (1CR16IS076) for 5 sem Dbms Project under our Vtu Syllabus</p>
+
+        </div>
+        <!-- Grid column -->
+
+        <hr class="clearfix w-100 d-md-none pb-3">
+
+        <!-- Grid column -->
+       
+      <!-- Grid row -->
+
+    </div>
+    <!-- Footer Links -->
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2018 Copyright:
+      <a href="https://mdbootstrap.com/education/bootstrap/"> Piyush Raj & Priti Singh</a>
+    </div>
+    <!-- Copyright -->
+
+  </footer> 
+
+
+
+
+{% endblock %}
+
+
+
+</body>
+</html>
